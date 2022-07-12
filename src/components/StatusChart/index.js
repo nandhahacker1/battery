@@ -43,7 +43,7 @@ const StatusChart = ({ chartData }) => {
 
 
   const labels = chartData.map((item) => DateTime.fromISO(item.timestamp).toFormat("yy LLL dd t"))
-  const percentage = chartData.map((item) => item.stateOfCharge !== null ? item.stateOfCharge : "NA")
+  const percentage = chartData.map((item) => item.stateOfCharge !== null ? item.stateOfCharge : 0)
 
   const data = {
     labels,
