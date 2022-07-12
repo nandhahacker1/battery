@@ -33,7 +33,7 @@ const BatteryDetails = () => {
           <>
             <div className={styles.title} >
               <i className="fa-solid fa-location-dot"></i>
-              <h1>{data.location}</h1>
+              <h1>{data.location!=null ? data.location : "NA"}</h1>
             </div>
             <div className={styles.subTitle} >
               <h3>Capacity: {data.capacity}</h3>
