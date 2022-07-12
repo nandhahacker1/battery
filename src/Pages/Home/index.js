@@ -15,7 +15,6 @@ const Home = () => {
   const { cardAlign } = useSelector(sate => sate.utile)
   let apiData = useSelector(sate => sate.apiData)
 
-  console.log(apiData);
 
   const [batteryDetails, setBatteryDetails] = useState([])
 
@@ -41,12 +40,11 @@ const Home = () => {
     }
     if (cardAlign === 3) {
       const data = apiData?.map(i => i).sort((a, b) => b.stateOfCharge - a.stateOfCharge);
+      console.log();
       setBatteryDetails(data)
     }
 
-  }, [apiData])
-
-console.log(batteryDetails);
+  }, [cardAlign])
 
   return (
     <div className={styles.container} >
